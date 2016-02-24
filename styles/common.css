@@ -1,0 +1,925 @@
+﻿@charset "utf-8";
+/************ ADDED FONTS *****************/
+@font-face
+{
+    font-family: 'HelveticaLTStd-Cond';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeue-Condensed'), url('fonts/HelveticaLTStd-Cond.ttf') format('truetype'); /* not available on ios7*/
+}
+
+@font-face
+{
+    font-family: 'HelveticaNeueLTStd-Md';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeue-Medium') , url('fonts/HelveticaNeueLTStd-Md.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'HelveticaNeueLTStd-BdCn';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeue-CondensedBold') , url('fonts/HelveticaNeueLTStd-BdCn.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'HelveticaNeueLTStd-MdCn';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeue-MediumCondensed'), url('fonts/HelveticaNeueLTStd-MdCn.otf') format('opentype'); /* not available on ios7*/
+}
+
+@font-face
+{
+    font-family: 'HelveticaLTStd-BdObl';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaLTStd-BoldObl'), url('fonts/HelveticaLTStd-BoldObl.otf') format('opentype');
+}
+@font-face
+{
+    font-family: 'HelveticaNeueLTStd-Bd';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeueLTStd-Bd'), url('fonts/HelveticaNeueLTStd-Bd.otf') format('opentype');
+}
+@font-face
+{
+    font-family: 'HelveticaNeueLTStd-It';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeueLTStd-It'), url('fonts/HelveticaNeueLTStd-It.otf') format('opentype');
+}
+@font-face
+{
+    font-family: 'HelveticaNeue-Reg';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaNeueLTStd-Roman'), url('fonts/HelveticaNeueLTStd-Roman.otf') format('opentype');
+}
+
+@font-face
+{
+    font-family: 'HelveticaNeueLTStd-Lt';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HelveticaLTStd-Light'), url('fonts/HelveticaLTStd-Light.otf') format('opentype');
+}
+/******************** FONT ADDITION END ******************/
+
+/********************* CORE HTML TAG STYLEING **************/
+.enable_gpu *
+{
+    -webkit-transform: translate3D(0px, 0px, 0px);
+    -webkit-backface-visibility: hidden;
+}
+*
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+}
+html
+{
+    font-size: 26px;
+}
+html, body
+{
+    position: absolute;
+    width: 2048px;
+    border-width: 0px;
+    height: 1536px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: "HelveticaNeue";
+    font-size: 100%;
+    -webkit-touch-callout: none !important;
+}
+
+div
+{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 0px none;
+}
+
+img
+{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none #000;
+}
+dl, dd, dt
+{
+    padding: 0px;
+    margin: 0px;
+}
+dt
+{
+    font-weight: 800;
+}
+h1, h2, h3, h4, h5, h6, h7, p, ul, ol
+{
+    margin-top: .23em;
+    margin-bottom: .23em;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+h4, h5, h6
+{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+sup, sub
+{
+    height: 10;
+    line-height: 1;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
+    font-size: 60%;
+}
+
+sup
+{
+    bottom: 1.3ex;
+    margin-left: 2px;
+}
+
+sup:before
+{
+    margin-left: 10px;
+}
+
+sub
+{
+    top: .5ex;
+}
+
+b, strong
+{
+    font-weight: 800;
+}
+
+i, em
+{
+    font-style: italic;
+}
+
+strong i, strong em, b i, b em, i strong, em strong, i b, em b
+{
+    font-style: italic;
+    font-weight: bold;
+}
+
+/******************** CORE HTML TAGS STYLING FINISHED *************************/
+
+
+/************************* MAIN DATA *************************/
+#main_data
+{
+    top: 0px;
+    height: 1136px;
+}
+
+#main_data > .tab-pages-container > .tab-pages > div
+{
+    position: relative;
+    height: 1137px;
+}
+
+
+#main_data > .tab-pages-container > .tab-pages
+{
+    width: 2048px;
+    z-index: 10;
+    left: 0px;
+    top: 0px;
+    height: auto;
+}
+
+/************************* MAIN DATA END *********************/
+
+/************************************* SIGN OFF LAYER STYLING **********************/
+.sign_off_layer
+{
+    height: auto;
+    right: 13px;
+    bottom: 116px;
+    list-style-type: none;
+    padding-left: 0px;
+    display: table;
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    font-family: HelveticaNeue-Reg;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-orient: horizontal;
+}
+
+ul.sign_off_layer li > img
+{
+    position: relative;
+}
+ul.sign_off_layer li + li
+{
+    padding-left: 22px;
+    word-spacing: 2px;
+}
+/***************************************** SIGN OFF LAYER END ************************************/
+
+/***************************************** LOGO POSITIONING ****************************************/
+a.logo
+{
+    position: absolute;
+    width: 452px;
+    height: 159px;
+    overflow: hidden;
+    top: 12px;
+    right: 0px;
+    z-index: 12;
+    display: block;
+}
+/******************************************LOGO STYLING END **************************************/
+
+/******************************** FOOTER STYLING STARTED *******************************/
+#footer
+{
+    height: 400px;
+    background-repeat: no-repeat;
+    top: 1136px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    font-family: 'HelveticaNeueLTStd-Bd';
+}
+
+/****************************************** SSI STYLING STARTED ***********************************/
+#ssi
+{
+    left: 96px;
+    top: 0px;
+    width: 1468px;
+    height: 385px;
+    color: White;
+}
+#footer #ssi_header_text
+{
+    color: white;
+    font-size: 30px;
+    height: auto;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    font-family: 'HelveticaNeueLTStd-Bd';
+}
+#ssi.scrollview .viewport
+{
+    width: 100%;
+}
+
+#ssi.scrollview .viewport .overview
+{
+    width: 1438px;
+  font-family: HelveticaNeue-Reg;
+}
+
+#ssi.scrollview .viewport .overview .bold
+{
+    width: 1438px;
+    font-family: 'HelveticaNeueLTStd-Bd';
+}
+#ssi.scrollview .viewport b + p, #ssi.scrollview .viewport p + p
+{
+    margin-top: 2px;
+}
+#ssi.scrollview .viewport h3
+{
+    margin: 0px;
+}
+#ssi .viewport .overview p
+{
+      line-height: 36px;  }
+      
+#ssi.scrollview .viewport h4
+{
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#ssi.scrollview .viewport h4 + h4
+{
+    margin-top: 10px;
+}
+#ssi .viewport *
+{
+    -webkit-transform: none;
+}
+
+#ssi .viewport ul, #ssi .viewport ol
+{
+    padding-left: 5px;
+    counter-reset: item;
+    list-style-position: outside;
+}
+
+#ssi .viewport ol li, #ssi .viewport ul li
+{
+    padding-left: .5em;
+    display: block;
+}
+
+#ssi .viewport ol li:before, #ssi .viewport ul li:before
+{
+    content: counters(item,".") ".";
+    counter-increment: item;
+    position: absolute;
+    left: .1em;
+    font-size: 1em;
+}
+
+#ssi .viewport ul li::before
+{
+    content: "\2022";
+    margin-left: 0em;
+    color: #ED0348;
+}
+
+#ssi .viewport ul ul li:before
+{
+    content: "\2013";
+    left: 1.8em;
+}
+
+#ssi .viewport ul ul li
+{
+    padding-left: 1em;
+    text-indent: -5px;
+}
+
+#ssi .viewport ul ul ul li
+{
+    padding-left: 1.8em;
+}
+
+#ssi .viewport ul ul ul li:before
+{
+    content: "\2022";
+    left: 4em;
+}
+
+#ssi.scrollview .viewport > div:nth-child(2)
+{
+    bottom: 0px !important;
+    top: 0px !important;
+    width: 10px !important;
+    background-color: #90c463 !important;
+    right: 11px !important;
+    border-radius: 0px !important;
+}
+
+#ssi.scrollview .viewport > div:nth-child(2) > div
+{
+    background-color: rgb(186, 231, 147) !important;
+    width: 100% !important;
+    border: 0px none !important;
+    border-radius: 0px !important;
+}
+
+
+/************************************************** SSI STYLING END *******************************/
+
+/****************************************** TOOLBAR STYLING **************************************/
+
+ul#toolbar, ul#toolbar li, ul#toolbar li a
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+ul#toolbar
+{
+    position: absolute;
+    right: 0px;
+    width: 476px;
+    top: 0px;
+    height: 397px;
+    display: block;
+    font-family: 'HelveticaNeueLTStd-Bd';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+}
+
+ul#toolbar a
+{
+    color: white;
+}
+
+ul#toolbar li
+{
+    height: 85px;
+    margin: 0px;
+    width: 100%;
+    display: block;
+    background: hsla(194,15%,97%,0.4);
+    border-left: 25px hsla(194, 15%, 97%, 0.4) solid;
+    box-sizing: border-box;
+    opacity: 1;
+}
+ul#toolbar li + li
+{
+    margin-top: 14px;
+}
+
+ul#toolbar li a
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+ul#toolbar li a span
+{
+    position: relative;
+    vertical-align: top;
+    top: 50%;
+    text-align: left;
+    -webkit-transform: translateY(-35%);
+    display: block;
+    text-align: center;
+}
+
+ul#toolbar li.disabled
+{
+    opacity: 0.4;
+}
+
+/******************************************* TOOLBAR STYLING END ********************************/
+
+/******************************************* FOOTER STYLING END *********************************/
+
+/****************************************** POPUP STYLING ************************************/
+.popup
+{
+    visibility: hidden;
+}
+
+.popup.visible
+{
+    visibility: inherit;
+}
+
+.popup h1, .popup h2, .popup h3
+{
+    margin-top: 2px;
+    font-size: 1em;
+}
+
+.popup h4
+{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.popup h1
+{
+    font-size: 1em;
+    font-family: HelveticaLTStd-BoldCond;
+    color: #000;
+}
+
+.popup h2, .popup h3, .popup h4, .popup h5
+{
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.popup ul, .popup ul *
+{
+    -webkit-transform: none;
+}
+
+.popup ul, .popup ol
+{
+    padding-left: 5px;
+    counter-reset: item;
+    list-style-position: outside;
+}
+
+.popup ol li, .popup ul li
+{
+    padding-left: .5em;
+    display: block;
+}
+.popup ol li:before, .popup ul li:before
+{
+    content: counters(item,".") ".";
+    counter-increment: item;
+    position: absolute;
+    left: .5em;
+    font-size: 1em;
+}
+
+.popup ul li:before
+{
+    content: "\2022";
+    margin-left: -0.3em;
+}
+
+
+.popup .column2 ul li:before
+{
+    margin-left: 0.7em;
+}
+
+.popup ul ul li:before
+{
+    content: "\2013";
+    color: initial;
+    left: 2.0em;
+}
+
+.popup ul ul li
+{
+    padding-left: 1.1em;
+}
+
+.popup ul ul ul li
+{
+    padding-left: 1.8em;
+}
+
+.popup ul ul ul li:before
+{
+    content: "\2022";
+    left: 4em;
+}
+
+.popup p + p, .popup p + h2, .popup li + li, .popup dd + dt, .popup dl + p, .popup p + dl, .popup ul + p, .popup p + ul, .popup h6 + p, .popup h6 + ul, .popup h6 + ol, .popup ul + h4, .popup p + h6, .popup b + p, .popup ul + h6, .popup ol + h6
+{
+    margin-top: .6em;
+}
+
+/********************************* POPUP CORE STYLING END *****************************/
+
+/******************************** POPUP COMPONENTS STYLING ***********************************/
+.popup
+{
+    height: 1137px;
+}
+
+.popup a.close
+{
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    width: 66px;
+    height: 71px;
+    right: 30px;
+    top: 186px;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-image: url(images/close.png);
+}
+
+.popup a.close.disabled
+{
+    opacity: 0.5;
+}
+
+.popup .content
+{
+    top: 311px;
+    left: 151px;
+    width: 1830px;
+    height: 780px;
+}
+
+.popup .background
+{
+    top: 169px;
+    left: 81px;
+    background-image: url(images/small_popup.png);
+    width: 1882px;
+    height: 972px;
+}
+
+.popup .content.scrollview .viewport
+{
+    height: 770px;
+    width: 1825px;
+}
+
+.popup .title
+{
+    position: absolute;
+    left: 149px;
+    bottom: 843px;
+    font-size: 60px;
+    color: white;
+    font-family: HelveticaNeue-Reg;
+}
+
+.popup .viewport > div:nth-child(2)
+{
+    bottom: 0px !important;
+    top: 0px !important;
+    width: 10px !important;
+    background-color: #90c463 !important;
+    right: 19px !important;
+    border-radius: 0px !important;
+}
+
+.popup .viewport > div:nth-child(2) > div
+{
+    background-color: rgb(186, 231, 147) !important;
+    width: 100% !important;
+    border: 0px none !important;
+    border-radius: 0px !important;
+}
+
+
+/*********************************** POPUP COMPONENT END **********************************************/
+
+/*************************************** POPUP TEMPLATE STYLING *******************************/
+
+/************************************** POPUP TEMPLATE STYLING END ****************************/
+
+/************************************ large POPUP **************************************/
+.large.popup
+{
+    height: 1536px;
+}
+
+.large.popup .background
+{
+    top: 0px;
+left: 0px;
+background-image: url(images/large_popup.png);
+width: 2048px;
+height: 1536px;
+}
+
+.large.popup .viewport .overview
+{
+ width: 100%;   
+    }
+
+.large.popup .content
+{
+    top: 160px;
+    height: 1203px;
+    -webkit-transform-origin: left top;
+    color: #666666;
+   font-family: HelveticaNeue-Reg;
+    font-size: 31px;
+    width: 1980px;
+    left: 49px;
+}
+
+.large.popup .content .bold , .small.popup .content .bold
+{
+      font-family: HelveticaNeueLTStd-Bd;
+}
+
+.large.popup .title
+{
+    left: 45px;
+top: 76px;
+font-size: 50px;
+height: auto;
+}
+
+.large.popup .content .viewport
+{
+    height: 100%;
+    width: 100%;
+}
+.large.popup a.close
+{
+    top:27px;
+    }
+.large.popup .pi
+{
+  position: absolute;
+display: block;
+display: block;
+width: 542px;
+height: 95px;
+right: 0px;
+bottom: 27px;
+background-repeat: no-repeat;
+}
+.large.popup .content #ssi_header_text
+{
+display:none;
+}
+#ssi .viewport .overview p{margin-bottom: 20px;}
+
+#ssi .viewport .overview p:nth-last-child(1) {margin-bottom: 0px;}
+
+.large.popup .content p + h4
+{
+    margin-top: 1.0em;
+}
+
+.large.popup ul li::before
+{
+    content: "\2022";
+    left: 0em;
+    color: rgb(233,6,73);
+    margin-left: 0.0em;
+}
+
+.large.popup ul ul li
+{
+    text-indent: -5px;
+}
+/********************************* large END ******************************************/
+/********************************* SMALL POPUP *************************************/
+.small.popup .content
+{
+    font-size: 35px;
+    width: 1805px;
+    -webkit-transform-origin: left top;
+    color: #666666;
+    font-family: HelveticaNeue-Reg;
+    font-size: 34px;
+}
+
+.small.popup a.close
+{
+    right: 136px;
+    top: 214px;
+}
+
+.small.popup .content.scrollview .viewport
+{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+}
+
+.small.popup .content > table td
+{
+    vertical-align: top;
+}
+
+.small.popup .content > table
+{
+    top: 127px;
+    position: relative;
+    left: 7px;
+    color: #414342;
+    table-layout: fixed;
+}
+
+
+.small.popup table.list td:nth-child(1)
+{
+    width: auto;
+    padding-right: .1em;
+    vertical-align: top;
+}
+
+.small.popup table.list
+{
+    border-collapse: collapse;}
+
+.small.popup table.list td {
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.small.popup .sd_content h4{
+    font-family: 'HelveticaNeueLTStd-Md';
+    font-size: 34px;
+}
+.small.popup .sd_content 
+{
+position:relative;
+}
+.small.popup .sd_content h4
+{
+margin-bottom:0px;
+}
+
+.small.popup .sd_content>  h4:first-child
+{
+margin-top:0px;
+}
+.small.popup .sd_content p
+{
+margin:0px;
+}
+  #sd_popup1 .viewport .overview p,#isi_popup .viewport .overview p, #ssi_popup1 .viewport .overview p, #ssi_popup2 .viewport .overview p, #ssi_popup3 .viewport .overview p, #ssi_popup4 .viewport .overview p, #ssi_popup5 .viewport .overview p
+ { 
+    line-height: 41px;
+ }
+
+/******************************** SMALL END ****************************************/
+/*************************************************SD POPUP*********************************************/
+
+/***********************************************sd popup End****************************************/
+
+/********************************** OTHER ELEMENTS STYLING *****************************/
+
+div.preload img
+{
+    position: absolute;
+    left: 10000px;
+    top: 10000px;
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.scrollview .viewport .overview
+{
+    list-style: none;
+    overflow: visible;
+    position: absolute;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    width: 1789px;
+    padding-bottom: 40px;
+}
+
+.scrollview .disable, .scrollview.native .scrollbar
+{
+    display: none;
+}
+
+.box
+{
+display:-webkit-box;
+-webkit-box-align:center;
+-webkit-box-pack:center;
+}
+
+.uppercase
+{
+     text-transform: Uppercase;
+    }
+    sup.shift
+    {
+        margin-left:0px;
+        }
+        
+        .top-links li a
+        {
+        padding-top:8px;
+        }
+        
+        .bold
+        {
+               font-family: HelveticaNeueLTStd-Bd;}
+
+
+.medium
+        {
+               font-family: HelveticaNeueLTStd-Md;}
+
+#ref_popup1 .overview
+{
+width:1765px;
+}
+/************************************************ OTHER ELEMENT STYLING END ****************************/
+.tab-pages-container {
+	height:1137px;
+}/* CSS Document */
+
